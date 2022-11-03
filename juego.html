@@ -1,0 +1,81 @@
+
+ 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" type="text/css" href="styles.css"/> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+        <title>Juego del Ahorcado</title> 
+    </head>
+    <body id="cuerpo"   onload="crearPalabraSecreta()" onkeypress="escucharEvento(event)">
+        <header>
+            <p class="titulo">Alura Challenge : Juego del ahorcado</p>
+           <div class="botonesJuegoPosicion">
+               
+                    <label for="recargarPagina">
+                        <input type="button" id="recargarPagina" value="NUEVO JUEGO" class="boton  botonesJuego verdeOscuro" onclick="recargarPagina()">
+                    </label>
+                
+    <!--           <a href="agregarPalabra.html">--> 
+                    <label for="aAgregarPalabra">
+                        <input type="button" id="aAgregarPalabra" value="AGREGAR PALABRA" class="boton  botonesJuego">
+                    </label> 
+             <!--   </a>-->  
+                    <label for="aJuego">
+                        <input type="button" id="aJuego" value="JUGAR"  class="boton  botonesJuego" >
+                    </label> 
+           </div> 
+            
+        </header>
+        <main>
+
+    <!--Pantalla Juego-->
+
+    <div id="jugarPage">
+            <section id="juego" class="pantallaJuego">
+                <div id="dibujos" class="ahorcadoYMensaje">
+                    <canvas id="ahorcado" class="canvas" width="300" height="500"></canvas>
+                <div id="mensajes" >
+                    <input id="laPalabraEra" type="text" class="ganarPerder" readonly>
+                </div>    
+                    
+                
+                </div>
+                
+
+                <canvas id="guiones" class="canvas" width="" height="150"></canvas>
+                
+                <input type="text" id="letrasIncorrectas" class="letrasIncorrectas" readonly></input> 
+            </section>
+        
+    </div>
+
+    <div id="agregarPalabraPage" >
+        <section id="agregarPalabra" class="pantallaAgregar" >
+            
+                <label for="ingresarPalabra">
+                    <input type ="text" id="ingresarPalabra" class="inputStyle" placeholder="Ingrese la nueva palabra aquí" pattern="[A-Z]" maxlength="10" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90)||(event.charCode >= 97 && event.charCode <= 122))" ></input>
+                </label>
+                <label for="botonAgregarPalabra">
+                    <button class="boton" id="botonAgregarPalabra" onclick= agregarPalabra() >Agregar palabra</button>
+                </label>
+            
+        </section> 
+
+    </div>
+
+        </main>
+        <footer>
+            <p class="footerText">Desarrollado por Sofi Medina</p>
+            <a href="https://github.com/SofiMedinaGH" target="_blank"><img src="github-logo.png" class="logosFooter" width="30px" height="30px"></a>
+            <a href="https://www.linkedin.com/in/sofiamicaelamedina/" target="_blank"><img src="linkedin-logo.png" class="logosFooter" width="30px" height="30px"></a> 
+            </footer>
+        
+    </body>
+    <script type="text/javascript" src="script.js"></script>
+</html>

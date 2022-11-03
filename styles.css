@@ -1,0 +1,209 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: 'Poppins', sans-serif; 
+    background: #d6eef1;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    height: 14%;
+    justify-content: space-between;
+    background: #054952;
+    box-shadow: 0px 5px 20px #257c7c; 
+}
+
+.botonInicio {
+    margin: auto;  
+}
+
+a {
+    text-decoration: none;
+}
+
+.boton {
+    display: block;
+    margin: auto;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: 20%;
+    min-width: 200px;
+    border-color: #257c7c;
+    border-radius: 5%;
+    background: #257c7c;
+    color: antiquewhite;
+    font-family: 'Fredoka One', cursive;
+    font-size: 150%;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    transform: scale(1.1);
+    cursor: pointer;  
+}
+
+.verdeOscuro {
+    background: #054952;  
+}
+
+.titulo {
+    font-family: 'Pacifico', cursive;
+    color: #FFFFFF;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    font-size: 20px;
+}
+
+.botonesJuego{
+    width: 150px;
+    min-width: 100px;
+    font-size: 70%;
+    padding: 1rem;
+    margin: 1rem;
+}
+.botonesJuegoPosicion{
+    display: flex;
+    flex-direction: row;
+}
+
+.ahorcadoYMensaje {
+    display: block;
+    padding: 0;
+    margin: auto;
+}
+
+.ganarPerder{
+   margin: 0 auto;
+   display: flex;
+}
+
+.canvas {
+    
+    padding: 0;
+    padding-right: 5px;
+    margin: auto;
+    display: block;
+    text-align: center;
+    border-radius: 5%;
+    
+}
+
+.canvas:first-of-type {
+    margin-top: 1.5rem;
+}
+
+.canvas:last-of-type {
+   /* margin-top: -.5rem;*/
+    margin-bottom: -.5rem;
+}
+
+.ganarPerder {
+    border: none;
+    outline: none;
+    background: #d6eef1;
+    font-family: 'Roboto', sans-serif;
+    color: #054952;
+}
+
+.letrasIncorrectas {
+    display: block;
+    margin: 0 auto;
+    background: #d6eef1;
+    text-align: center;
+    font-size: 250%;
+    font-family: 'Roboto', sans-serif;
+    color: #257c7c;
+    border: none;
+    outline: none 
+}
+
+footer {
+    position : fixed;
+    bottom: 0;
+    margin-top: auto;
+    background: #03363d;
+    color: #FFFFFF;
+    text-align:center;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footerText {
+    margin-top: 1rem;
+}
+
+.logosFooter {
+    padding-top: 5px;
+    margin: 0.3rem 0.5rem;
+    transition: 0.3s;
+}
+
+.logosFooter:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.inputStyle {
+    display: block;
+    border: none;
+    outline: none;
+    resize: none;
+    border-radius: 2%;
+    margin:   5em auto;
+    padding-top: 1rem;  
+    padding-left: 1rem;  
+    background: #31a8a8;
+    width: 50%;
+    height: 100px;
+    box-shadow: #054952 0.1rem 0.1rem 0.2rem;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 200%;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+
+    }
+.titulo {
+    display: none;
+}
+
+canvas {
+    max-width: 63%;
+}
+
+
+.letrasIncorrectas {
+    font-size: 100%;
+    margin-bottom: 1em;
+}
+
+footer {
+    position: relative;
+  /*  display: flex;
+    flex-direction: row;
+    justify-content: center;*/
+}
+
+.boton {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+    
+}
+
